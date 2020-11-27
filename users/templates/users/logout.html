@@ -1,0 +1,13 @@
+{% extends 'mainapp/base.html' %}
+
+{% block title %} Log Out {% endblock %}
+
+{% block content %}
+
+<div class="container">
+    <h2 class='mx-10 my-5'>You have been logged out</h2>
+    <div>
+        <a class="btn btn-success" href="{% url 'login' %}">Log In Again</a>
+    </div>
+</div>
+{% endblock %}

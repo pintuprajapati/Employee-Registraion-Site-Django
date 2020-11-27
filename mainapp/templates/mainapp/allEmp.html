@@ -1,0 +1,18 @@
+{% extends 'mainapp/base.html' %}
+
+{% block title %} All Employees {% endblock %}
+
+{% block content %}
+    <h1>ALL EMPLOYEES</h1>
+    (In order of "First Name" and "Last Name")<br><br><br><br>
+    
+    {% for emp in all_employees %}
+        <a href="{% url 'update_emp' emp.id %}" target="_blank">
+            <p>{{ emp.firstname }} {{emp.lastname}}</p>
+        </a>
+    {% endfor %}
+ 
+    
+
+{% endblock %}
+

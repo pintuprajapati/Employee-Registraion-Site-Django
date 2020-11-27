@@ -1,0 +1,63 @@
+{% extends 'mainapp/base.html' %}
+
+{% block title %} Update Page {% endblock %}
+
+{% block content %}
+  <h1>
+    <center>UPDATE PAGE</center>
+  </h1>
+  <div class="container mt-4">
+    <form action="/add_emp_submission/" method="POST">
+      {% csrf_token %}
+      <div class="form-row">
+        <div class="form-group col-md-6">
+          <label for="firstname">First Name</label>
+          <input name="firstname" type="text" class="form-control" id="firstname">
+        </div>
+        <div class="form-group col-md-6">
+          <label for="lastname">Last Name</label>
+          <input name="lastname" type="text" class="form-control" id="lastname">
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="form-group col-md-6">
+          <label for="empId">Employee Id</label>
+          <input name="empId" type="number" class="form-control" id="empId">
+        </div>
+        <div class="form-group col-md-6">
+          <label for="empEmail">Email</label>
+          <input name="empEmail" type="email" class="form-control" id="empEmail">
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="address">Address</label>
+        <input name="address" type="text" class="form-control" id="address" placeholder="1234 Main St">
+      </div>
+      <div class="form-row">
+        <div class="form-group col-md-6">
+          <label for="city">City</label>
+          <input name="city" type="text" class="form-control" id="city">
+        </div>
+        <div class="form-group col-md-4">
+          <label for="phone">Mobile Number:</label><br>
+          <input name="phone" type="tel" id="phone" class="form-control" name="phone" placeholder="0123456789"
+            pattern="[0-9]{10}">
+          <small>Format: 0123456789</small><br><br>
+
+        </div>
+        <div class="form-group col-md-2">
+          <label for="birthday">Birthday:</label>
+          <input name="birthday" type="date" id="birthday" class="form-control" name="birthday">
+        </div>
+      </div>
+      <button type="submit" class="btn btn-primary">Update</button>
+    </form>
+  </div>
+
+  <div class="container mt-4">
+    <a href="{% url 'delete_emp' empl.id %}">
+      <button type="submit" class="btn btn-success">DELETE EMPLOYEE</button>
+    </a>
+  </div>
+
+{% endblock %}
