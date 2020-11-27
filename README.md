@@ -8,7 +8,7 @@ admin_panel's username and passwords: admin, admin
 Apps:
   * mainapp: In this app I have created the "models.py". Also templates likes "Add Employee", "All Employee", "base.html", "Update Employee" and "Delete Employee"
   
-  * users: Here I have created the "forms.py". Also templates likes "Log IN", "Log Out", "Profile", "Register" 
+  * users: Here I have created the "forms.py". Also templates likes "Log In", "Log Out", "Profile", "Register" 
   
  
     
