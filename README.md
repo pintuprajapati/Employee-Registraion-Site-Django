@@ -1,5 +1,5 @@
 # Employee-Registraion-Site-Django
-A site where Manager can Create, Retirve, Update, Delete the Employee.
+A site where Manager can Create, Retrieve, Update, Delete the Employee.
 
 - Main project name: simplesite
 - App names: mainapp, users
